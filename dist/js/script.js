@@ -31,16 +31,6 @@ faqMenu.forEach((menuList)=>{
     })
 });
 
-// const toggle_menu = document.querySelector(".toggle_menu");
-// const nav = document.querySelector("nav");
-// toggle_menu.addEventListener("click", ()=>{
-//         nav.classList.toggle('active'); //nav element
-//         toggle_menu.classList.toggle('active')  //burger
-//     }
-// );
-
-
-
 
 
 
