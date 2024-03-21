@@ -1,0 +1,246 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.container{
+    @apply 
+    w-full mx-auto px-[15px]
+    sm:max-w-[640px] md:max-w-[768px]
+    lg:max-w-[1024px] xl:max-w-[1280px]
+    2xl:max-w-[1536px];
+}
+
+@layer base {
+    body{
+        @apply font-raleway leading-[1.6] font-normal;
+    }
+  }
+
+@layer components{
+    body.open{  
+        @apply overflow-hidden;
+        /* disable scroll on nav mobile open */
+    }
+
+    /* START OF HEADER */
+    /* .header{
+        @apply transition-all duration-500
+    }
+    .header.scroll{
+        @apply fixed w-full lg:static
+        bg-dark lg:bg-transparent z-[999]
+        transition-all duration-500;
+    }
+    .header__wrapper{
+        @apply flex items-center justify-between
+        lg:block lg:mx-auto;
+    }
+        
+    .branding{
+        @apply items-center gap-12
+        lg:flex lg:justify-between
+        lg:max-w-[87rem] lg:w-full
+        lg:py-4 lg:px-4
+        lg:bg-transparent
+        transition-all duration-500;
+    }
+    .branding.scroll{
+        @apply lg:bg-dark
+        lg:fixed lg:rounded-lg
+        lg:px-4 lg:my-6
+        transition-all duration-500
+        z-[999];
+    }
+    .branding img{
+        @apply w-[7rem];
+    }
+    .branding .header__navd{
+        @apply hidden
+        lg:flex
+    }
+    .branding .header__navd li{
+        @apply font-semibold text-lg text-light 
+        py-3 px-4
+        transition-all duration-150
+        hover:text-accent hover:bg-light;
+    }
+    
+    .header__action{
+        @apply bg-dark
+        w-0 h-[100vh] px-0 pt-0 
+        absolute top-0 right-0 z-[999] 
+        overflow-hidden transition-all
+        lg:static lg:h-fit lg:w-fit;
+    }
+    .header__action.open{
+        @apply w-full h-[100vh] px-10 pt-10
+        overflow-hidden
+        flex flex-col gap-16
+        justify-center items-center
+        transition-all duration-300;
+    }
+    .header__action .header__navm{
+        @apply pb-5 h-fit
+        flex flex-col
+        justify-center items-center
+        lg:hidden;
+    }
+    .header__navm li{
+        @apply w-[16rem] h-16 py-6 px-12
+        text-light font-bold text-4xl
+        flex justify-center items-center
+        transition-all duration-150
+        hover:text-accent hover:bg-light;
+    }
+    .header__navm li a.active{
+        @apply text-accent;
+    }
+    .header__action .header__navm__socials{
+        @apply flex text-light
+        justify-center items-center
+        lg:hidden;
+    }
+    .header__action .header__navm__socials li{
+        @apply text-3xl
+        w-16 h-16 px-10
+        flex justify-center items-center
+        transition-all duration-150
+        hover:bg-light;
+    }
+    
+    .header__action .header__btn{
+        @apply pt-5 flex flex-col gap-3 
+        lg:flex-row-reverse;
+    }
+    .header__action .header__btn a{
+        @apply flex gap-[1rem] items-center
+        transition-all duration-150
+        hover:text-accent;
+    }
+    .header__action .header__kamote{
+        @apply flex gap-5;
+    }
+        
+    .burger__menu{
+        @apply flex flex-col items-end
+        z-[999] lg:hidden;
+    }
+    .burger__menu span{
+        @apply w-[1.5rem] h-[0.3rem] bg-light
+        block rounded-full
+        transition-all duration-500;
+    }
+    .burger__menu span:nth-child(2){
+        @apply w-[1.25rem] my-1;
+    }
+    .burger__menu span:nth-child(3){
+        @apply w-[1rem];
+    }
+    .burger__menu.open span{
+        @apply w-[1.5rem] 
+        transition-all duration-500;
+    }
+    .burger__menu.open span:first-child{
+        @apply translate-y-[12px] rotate-[225deg]
+        transition-all duration-300;
+    }
+    .burger__menu.open span:nth-child(2){
+        @apply opacity-0 transition-all;
+    }
+    .burger__menu.open span:last-child{
+        @apply translate-y-[-6px] rotate-[-225deg]
+        transition-all duration-300;
+    } */
+
+
+    .faq h1{
+        @apply text-center text-h1_clamp font-extralight font-raleway
+    }
+
+    .faq i.fa-chevron-down{
+        @apply animate-spin;
+    }
+
+    .faq__menu__content h2{
+        @apply text-2xl mb-10 font-semibold;
+    }
+    .khards{
+        @apply bg-gray2 relative
+        py-3 px-3 mb-4
+        transition-all;
+    }
+    .khards__header h3{
+        @apply text-base md:text-lg font-semibold;
+    }
+    .khards__header h3>span{
+        @apply hidden md:inline-block
+        mr-5 text-accent
+        font-bold text-2xl;
+    }
+    .khards ul{
+        @apply my-8 ml-8
+        transition-all ease-in duration-300;
+    }
+    .khards ul>li{
+        @apply mb-2 leading-9;
+    }
+    .khards ul>li>i{
+        @apply text-xs text-accent;
+    }
+
+
+
+    /* START OF FOOTER */
+    .footer__links ul{
+        @apply mx-5;
+    }
+    .footer__links ul li:first-child{
+        @apply font-semibold;
+    }
+    .footer__btn a{
+        @apply mx-auto w-full hover:bg-yellow
+    }
+    .footer__bottom div ul>li{
+        @apply mx-3;
+    }
+    
+
+
+
+}
+
+@layer utilities{
+    .btn{
+        @apply inline-block
+        /* p-[1rem] px-[2rem]
+        rounded-full
+        border-transparent border-[1px] 
+        text-base font-medium */
+        rounded-[.375rem]
+        font-normal text-center
+        py-2 px-6
+        transition-all;
+    }
+    .btn.bg--accent{
+        @apply bg-accent text-light
+        hover:bg-light hover:text-accent hover:border-accent;
+    }
+    .btn.bg--transparent-alt{
+        @apply bg-transparent text-light border-[1px] border-light
+        hover:bg-light hover:text-accent hover:border-accent;
+    }
+    
+    .btn.bg--dark{
+        @apply bg-dark text-light;
+    }
+    .btn.bg--light{
+        @apply bg-light text-dark border-[1px] border-dark;
+    }
+    .btn.bg--transparent-no-border{
+        @apply bg-transparent text-dark;
+    }
+    .btn.bg--transparent{
+        @apply bg-transparent text-dark border-[1px] border-dark;
+    }
+    
+}
