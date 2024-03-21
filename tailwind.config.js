@@ -20,7 +20,7 @@ module.exports = {
       },
       fontFamily: {
         'raleway': ["Raleway", "sans-serif"],
-        'poppins': ["Poppins", "sans-serif"],
+        // 'poppins': ["Poppins", "sans-serif"],
       },
       fontSize: {
         h1_clamp: "clamp(2.4rem, 6vw, 5rem)",
