@@ -16,6 +16,7 @@ module.exports = {
         accent_alt: "#28941e",
         yellow: "#daa625",
         facebook: "#3b5897",
+        facebook_hover: "#1573e5"
       },
       fontFamily: {
         'raleway': ["Raleway", "sans-serif"],

@@ -59,7 +59,7 @@
         lg:flex
     }
     .branding .header__navd li{
-        @apply font-semibold text-lg text-light 
+        @apply font-semibold text-lg text-dark 
         py-3 px-4
         transition-all duration-150
         hover:text-accent hover:bg-light;
@@ -87,7 +87,7 @@
     }
     .header__navm li{
         @apply w-[16rem] h-16 py-6 px-12
-        text-light font-bold text-4xl
+        text-dark font-bold text-4xl
         flex justify-center items-center
         transition-all duration-150
         hover:text-accent hover:bg-light;
@@ -96,7 +96,7 @@
         @apply text-accent;
     }
     .header__action .header__navm__socials{
-        @apply flex text-light
+        @apply flex text-dark
         justify-center items-center
         lg:hidden;
     }
@@ -119,48 +119,67 @@
     }
     .header__action .header__kamote{
         @apply flex gap-5;
-    }
-        
-    .burger__menu{
-        @apply flex flex-col items-end
-        z-[999] lg:hidden;
-    }
-    .burger__menu span{
-        @apply w-[1.5rem] h-[0.3rem] bg-light
-        block rounded-full
-        transition-all duration-500;
-    }
-    .burger__menu span:nth-child(2){
-        @apply w-[1.25rem] my-1;
-    }
-    .burger__menu span:nth-child(3){
-        @apply w-[1rem];
-    }
-    .burger__menu.open span{
-        @apply w-[1.5rem] 
-        transition-all duration-500;
-    }
-    .burger__menu.open span:first-child{
-        @apply translate-y-[12px] rotate-[225deg]
-        transition-all duration-300;
-    }
-    .burger__menu.open span:nth-child(2){
-        @apply opacity-0 transition-all;
-    }
-    .burger__menu.open span:last-child{
-        @apply translate-y-[-6px] rotate-[-225deg]
-        transition-all duration-300;
     } */
+        
+    
+    .header{
+        @apply fixed top-0
+        lg:static z-50
+        w-full bg-white
+    }
+
+    .header__contact_d ul>li{
+        @apply mx-2;
+    }
+
+    /* .burger */
+    .burger {
+        @apply duration-500 cursor-pointer;
+    }
+    .burger.active{
+        @apply transition-all duration-500 rotate-180;
+    }
+    .burger span {
+        @apply w-[40px] h-[0.25rem] m-1
+        block content-[""] bg-dark
+        transition-all duration-500
+    }
+    .burger.active span {
+        @apply rounded-md h-1.5
+    }
+    .burger.active span:first-child {
+        @apply translate-x-[-0.1rem] translate-y-[0.1rem]
+        rotate-[-38deg] transition-all duration-500 w-[1.5rem]
+    }
+    .burger.active span:last-child {
+        @apply translate-x-[-0.1rem] translate-y-[-0.1rem]
+        rotate-[38deg] transition-all duration-500 w-[1.5rem]
+    }
+
 
 
     .faq h1{
-        @apply text-center text-h1_clamp font-extralight font-raleway
+        @apply text-center text-h1_clamp font-thin font-raleway
     }
-
-    .faq i.fa-chevron-down{
-        @apply animate-spin;
+    .faq a{
+        @apply cursor-pointer;
     }
-
+    .faq__menu li{
+        @apply py-[0.35rem] text-[#737373]
+        cursor-pointer
+        transition-all duration-500;
+    }
+    .faq__menu li.active{
+        @apply text-accent underline;
+    }
+    .faq__menu_content{
+        @apply h-0 overflow-hidden
+        transition-all duration-500;
+    }
+    .faq__menu_content.active{
+        @apply h-fit
+        transition-all;
+    }
     .faq__menu_content h2{
         @apply text-2xl mb-10 font-semibold;
     }
@@ -168,6 +187,13 @@
         @apply bg-gray2 relative
         py-3 px-3 mb-4
         transition-all;
+    }
+    .khards .khards__header i{
+        @apply absolute top-5 right-5
+        transition-all;
+    }
+    .khards.down .khards__header i{
+        @apply -rotate-180;
     }
     .khards__header h3{
         @apply text-base md:text-lg font-semibold;
@@ -178,8 +204,12 @@
         font-bold text-2xl;
     }
     .khards ul{
-        @apply my-8 ml-8
-        transition-all ease-in duration-300;
+        @apply my-0 ml-8
+        overflow-hidden h-0
+        transition-all;
+    }
+    .khards.down ul{
+        @apply my-8 h-fit;
     }
     .khards ul>li{
         @apply mb-2 leading-9;
@@ -195,8 +225,6 @@
         @apply text-accent_alt;
     }
 
-
-
     /* START OF FOOTER */
     .footer__links ul{
         @apply mx-5;
@@ -210,10 +238,6 @@
     .footer__bottom div ul>li{
         @apply mx-3;
     }
-    
-
-
-
 }
 
 @layer utilities{

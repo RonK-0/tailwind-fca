@@ -1,54 +1,36 @@
-// const burgir = document.querySelector(".burger__menu");
-// const headerA = document.querySelector(".header__action");
-// const bodih = document.querySelector("body");
-// burgir.addEventListener("click", ()=>{
-//     burgir.classList.toggle("open");
-//     headerA.classList.toggle("open");
-//     bodih.classList.toggle("open");
-// });
+const burg = document.querySelector(".burger");
+const nav = document.querySelector("nav");
+const bodih = document.querySelector("body");
+burg.addEventListener("click", ()=>{
+    burg.classList.toggle("active");
+    nav.classList.toggle("open");
+    bodih.classList.toggle("open");
+});
 
 
-// const khards = document.querySelectorAll(".khards");
-// khards.forEach((khard) => {
-//     khard.addEventListener("click", ()=>{
-//         khard.classList.toggle("down");
-//     });
-// });
+const khards = document.querySelectorAll(".khards");
+khards.forEach((khard) => {
+    khard.addEventListener("click", ()=>{
+        khard.classList.toggle("down");
+    });
+});
 
 const faqMenu = document.querySelectorAll(".faq__menu li");
-const faqMenuContent = document.querySelectorAll(".faqMenuContent");
+const faqMenuContent = document.querySelectorAll(".faq__menu_content");
 faqMenu.forEach((menuList)=>{
     menuList.addEventListener("click", ()=>{
-        // removeActiveMenu();
         faqMenu.forEach((menu)=>{
             menu.classList.remove("active")
         })
         menuList.classList.add("active");
         const activeContent = document.querySelector(`#${menuList.id}-content`);
-        // removeContentActive();
         faqMenuContent.forEach((content)=>{
             content.classList.remove("active")
         })
         activeContent.classList.add("active")
     })
 });
-// function removeActiveMenu() {
-//     faqMenu.forEach((menu)=>{
-//         menu.classList.remove("active")
-//     })
-// }
-// function removeContentActive() {
-//     faqMenuContent.forEach((content)=>{
-//         content.classList.remove("active")
-//     })
-// }
 
-
-
-
-
-
-    // COPIED JS TO BE STUDIED
 // const toggle_menu = document.querySelector(".toggle_menu");
 // const nav = document.querySelector("nav");
 // toggle_menu.addEventListener("click", ()=>{
@@ -57,27 +39,9 @@ faqMenu.forEach((menuList)=>{
 //     }
 // );
 
-// const contentMenu = document.querySelectorAll(".contentMenu li");
-// const theContent = document.querySelectorAll(".theContent");
-// contentMenu.forEach((menuList)=>{
-//     menuList.addEventListener("click", ()=>{
-//         removeActiveMenu();
-//         menuList.classList.add("active");
-//         const activeContent = document.querySelector(`#${menuList.id}-content`);
-//         removeContentActive();
-//         activeContent.classList.add("active")
-//     })
-// });
-// function removeActiveMenu() {
-//     contentMenu.forEach((menu)=>{
-//         menu.classList.remove("active")
-//     })
-// }
-// function removeContentActive() {
-//     theContent.forEach((content)=>{
-//         content.classList.remove("active")
-//     })
-// }
+
+
+
 
 
     //PREVIOUS JS UNUSED FOR THIS PROJECT
