@@ -803,10 +803,16 @@ body.open {
 }
 
 .khards ul>li>i {
+  margin-right: 0.75rem;
   font-size: 0.75rem;
   line-height: 1rem;
   --tw-text-opacity: 1;
   color: rgb(0 133 66 / var(--tw-text-opacity));
+}
+
+.khards ul>li>a {
+  --tw-text-opacity: 1;
+  color: rgb(40 148 30 / var(--tw-text-opacity));
 }
 
 /* START OF FOOTER */

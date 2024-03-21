@@ -185,7 +185,10 @@
         @apply mb-2 leading-9;
     }
     .khards ul>li>i{
-        @apply text-xs text-accent;
+        @apply text-xs text-accent mr-3;
+    }
+    .khards ul>li>a{
+        @apply text-accent_alt;
     }
 
 
