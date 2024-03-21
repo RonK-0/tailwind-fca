@@ -17,111 +17,11 @@
   }
 
 @layer components{
-    body.open{  
+    /* body.open{  
         @apply overflow-hidden;
-        /* disable scroll on nav mobile open */
-    }
+    } */
 
     /* START OF HEADER */
-    /* .header{
-        @apply transition-all duration-500
-    }
-    .header.scroll{
-        @apply fixed w-full lg:static
-        bg-dark lg:bg-transparent z-[999]
-        transition-all duration-500;
-    }
-    .header__wrapper{
-        @apply flex items-center justify-between
-        lg:block lg:mx-auto;
-    }
-        
-    .branding{
-        @apply items-center gap-12
-        lg:flex lg:justify-between
-        lg:max-w-[87rem] lg:w-full
-        lg:py-4 lg:px-4
-        lg:bg-transparent
-        transition-all duration-500;
-    }
-    .branding.scroll{
-        @apply lg:bg-dark
-        lg:fixed lg:rounded-lg
-        lg:px-4 lg:my-6
-        transition-all duration-500
-        z-[999];
-    }
-    .branding img{
-        @apply w-[7rem];
-    }
-    .branding .header__navd{
-        @apply hidden
-        lg:flex
-    }
-    .branding .header__navd li{
-        @apply font-semibold text-lg text-dark 
-        py-3 px-4
-        transition-all duration-150
-        hover:text-accent hover:bg-light;
-    }
-    
-    .header__action{
-        @apply bg-dark
-        w-0 h-[100vh] px-0 pt-0 
-        absolute top-0 right-0 z-[999] 
-        overflow-hidden transition-all
-        lg:static lg:h-fit lg:w-fit;
-    }
-    .header__action.open{
-        @apply w-full h-[100vh] px-10 pt-10
-        overflow-hidden
-        flex flex-col gap-16
-        justify-center items-center
-        transition-all duration-300;
-    }
-    .header__action .header__navm{
-        @apply pb-5 h-fit
-        flex flex-col
-        justify-center items-center
-        lg:hidden;
-    }
-    .header__navm li{
-        @apply w-[16rem] h-16 py-6 px-12
-        text-dark font-bold text-4xl
-        flex justify-center items-center
-        transition-all duration-150
-        hover:text-accent hover:bg-light;
-    }
-    .header__navm li a.active{
-        @apply text-accent;
-    }
-    .header__action .header__navm__socials{
-        @apply flex text-dark
-        justify-center items-center
-        lg:hidden;
-    }
-    .header__action .header__navm__socials li{
-        @apply text-3xl
-        w-16 h-16 px-10
-        flex justify-center items-center
-        transition-all duration-150
-        hover:bg-light;
-    }
-    
-    .header__action .header__btn{
-        @apply pt-5 flex flex-col gap-3 
-        lg:flex-row-reverse;
-    }
-    .header__action .header__btn a{
-        @apply flex gap-[1rem] items-center
-        transition-all duration-150
-        hover:text-accent;
-    }
-    .header__action .header__kamote{
-        @apply flex gap-5;
-    } */
-        
-    
     .header{
         @apply fixed top-0
         lg:static z-50
@@ -130,6 +30,42 @@
 
     .header__contact_d ul>li{
         @apply mx-2;
+    }
+    .header__wrapper ul>li>i{
+        @apply mr-1
+    }
+    .nav{
+        @apply bg-light
+        w-full h-screen px-0 pt-0 
+        absolute top-[95px] left-[100%] z-[99] 
+        flex  flex-col items-center
+        lg:static lg:h-fit lg:w-full
+        my-5 lg:my-2
+        transition-all duration-300 ease-in-out;
+    }
+    .nav.open{
+        @apply 
+        top-[95px] left-0
+        flex flex-col
+        transition-all duration-300;
+    }
+    .nav a{
+        @apply block text-center;
+    }
+    .nav ul>li{
+        @apply my-3 border-l-2 border-l-gray-300 font-normal;
+    }
+    .nav ul>li>a{
+        @apply p-2
+    }
+    .nav ul>li:first-child {
+        @apply border-none
+    }
+    .nav a.btn{
+        @apply px-8;
+    }
+    .nav ul li:last-child a {
+        @apply w-[113px] mx-auto
     }
 
     /* .burger */
@@ -140,12 +76,13 @@
         @apply transition-all duration-500 rotate-180;
     }
     .burger span {
-        @apply w-[40px] h-[0.25rem] m-1
+        @apply w-[38px] h-[0.25rem] m-1
         block content-[""] bg-dark
         transition-all duration-500
+        translate-x-[1px] drop-shadow-md
     }
     .burger.active span {
-        @apply rounded-md h-1.5
+        @apply rounded-md
     }
     .burger.active span:first-child {
         @apply translate-x-[-0.1rem] translate-y-[0.1rem]
@@ -155,7 +92,6 @@
         @apply translate-x-[-0.1rem] translate-y-[-0.1rem]
         rotate-[38deg] transition-all duration-500 w-[1.5rem]
     }
-
 
 
     .faq h1{
@@ -188,20 +124,20 @@
         py-3 px-3 mb-4
         transition-all;
     }
-    .khards .khards__header i{
-        @apply absolute top-5 right-5
-        transition-all;
-    }
-    .khards.down .khards__header i{
-        @apply -rotate-180;
-    }
     .khards__header h3{
         @apply text-base md:text-lg font-semibold;
     }
     .khards__header h3>span{
         @apply hidden md:inline-block
         mr-5 text-accent
-        font-bold text-2xl;
+        font-semibold text-2xl;
+    }
+    .khards__header i{
+        @apply absolute top-4 right-5
+        transition-all text-xl;
+    }
+    .khards.down .khards__header i{
+        @apply -rotate-180;
     }
     .khards ul{
         @apply my-0 ml-8
@@ -242,7 +178,7 @@
 
 @layer utilities{
     .btn{
-        @apply inline-block
+        @apply block
         /* p-[1rem] px-[2rem]
         rounded-full
         border-transparent border-[1px] 
