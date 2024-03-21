@@ -16,7 +16,7 @@
 // });
 
 const faqMenu = document.querySelectorAll(".faq__menu li");
-const theContent = document.querySelectorAll(".theContent");
+const faqMenuContent = document.querySelectorAll(".faqMenuContent");
 faqMenu.forEach((menuList)=>{
     menuList.addEventListener("click", ()=>{
         // removeActiveMenu();
@@ -26,22 +26,22 @@ faqMenu.forEach((menuList)=>{
         menuList.classList.add("active");
         const activeContent = document.querySelector(`#${menuList.id}-content`);
         // removeContentActive();
-        theContent.forEach((content)=>{
+        faqMenuContent.forEach((content)=>{
             content.classList.remove("active")
         })
         activeContent.classList.add("active")
     })
 });
-function removeActiveMenu() {
-    faqMenu.forEach((menu)=>{
-        menu.classList.remove("active")
-    })
-}
-function removeContentActive() {
-    theContent.forEach((content)=>{
-        content.classList.remove("active")
-    })
-}
+// function removeActiveMenu() {
+//     faqMenu.forEach((menu)=>{
+//         menu.classList.remove("active")
+//     })
+// }
+// function removeContentActive() {
+//     faqMenuContent.forEach((content)=>{
+//         content.classList.remove("active")
+//     })
+// }
 
 
 

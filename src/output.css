@@ -737,7 +737,7 @@ body.open {
   animation: spin 1s linear infinite;
 }
 
-.faq__menu__content h2 {
+.faq__menu_content h2 {
   margin-bottom: 2.5rem;
   font-size: 1.5rem;
   line-height: 2rem;
@@ -803,9 +803,12 @@ body.open {
 }
 
 .khards ul>li>i {
-  margin-right: 0.75rem;
+  margin-right: 0.25rem;
   font-size: 0.75rem;
   line-height: 1rem;
+}
+
+.khards ul>li>i.fas.fa-circle {
   --tw-text-opacity: 1;
   color: rgb(0 133 66 / var(--tw-text-opacity));
 }

@@ -161,7 +161,7 @@
         @apply animate-spin;
     }
 
-    .faq__menu__content h2{
+    .faq__menu_content h2{
         @apply text-2xl mb-10 font-semibold;
     }
     .khards{
@@ -185,7 +185,11 @@
         @apply mb-2 leading-9;
     }
     .khards ul>li>i{
-        @apply text-xs text-accent mr-3;
+        @apply text-xs mr-1
+        /* mr-3; */
+    }
+    .khards ul>li>i.fas.fa-circle{
+        @apply text-accent;
     }
     .khards ul>li>a{
         @apply text-accent_alt;
