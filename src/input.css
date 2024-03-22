@@ -133,7 +133,7 @@
         font-semibold text-2xl;
     }
     .khards__header i{
-        @apply absolute top-4 right-5
+        @apply absolute top-2 md:top-4 right-5
         transition-all text-xl;
     }
     .khards.down .khards__header i{

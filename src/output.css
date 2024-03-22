@@ -844,13 +844,19 @@ body {
 
 .khards__header i {
   position: absolute;
-  top: 1rem;
+  top: 0.5rem;
   right: 1.25rem;
   font-size: 1.25rem;
   line-height: 1.75rem;
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
+}
+
+@media (min-width: 768px) {
+  .khards__header i {
+    top: 1rem;
+  }
 }
 
 .khards.down .khards__header i {
@@ -1049,11 +1055,6 @@ body {
 .py-2 {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
-}
-
-.py-3 {
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
 }
 
 .py-\[130px\] {
@@ -1332,19 +1333,14 @@ body {
     background-color: rgb(255 255 255 / var(--tw-bg-opacity));
   }
 
-  .lg\:py-3 {
-    padding-top: 0.75rem;
-    padding-bottom: 0.75rem;
+  .lg\:py-2 {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
   }
 
   .lg\:py-\[91px\] {
     padding-top: 91px;
     padding-bottom: 91px;
-  }
-
-  .lg\:py-2 {
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
   }
 
   .lg\:text-black {
